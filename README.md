@@ -72,9 +72,9 @@ Use the **1-Click Persona Switcher** on the Login page to instantly test both us
 ## 🚀 Running Locally
 ## Team Members
 
-- Shashank Manjunath
-- Satvik
-- Sahana
+- Shashank M
+- Satvik S P
+- Sahana Nagesh Rao
 
 ```bash
 # Install dependencies
