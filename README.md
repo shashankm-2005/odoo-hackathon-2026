@@ -1,91 +1,158 @@
-# Dayflow HRMS
-> *"Every workday, perfectly aligned."*
+<div align="center">
 
-A full-scale, database-driven Human Resource Management System built for the **Odoo Hackathon 2026**. Dayflow unifies employee management, daily attendance punch clocks, leave approval workflows, automated payroll execution, and an embedded AI HR Assistant into a clean, modern SaaS web application.
+# 🕐 Dayflow HRMS
+
+### *"Every workday, perfectly aligned."*
+
+**A full-scale, database-driven Human Resource Management System**
+built for the **Odoo Hackathon 2026**
+
+Dayflow unifies employee management, attendance tracking, leave workflows, automated payroll, and an embedded AI HR Assistant — all inside one clean, modern SaaS web app.
+
+</div>
 
 ---
 
-## 🌟 Key Functional Modules
+## 📖 Table of Contents
 
-### 1. 👥 Workforce & Employee Management
-- **Master Directory**: Searchable, filterable by department (*Engineering, HR, Finance, Marketing, Operations*) and employment status (*Active, Probation, Inactive, Terminated*).
-- **Dual View Modes**: Switch between high-density data tables and visual profile cards.
-- **Full Employee CRUD**: Onboard new employees with ID auto-generation, profile avatars, designations, joining dates, base compensation, and emergency contacts.
-- **Detailed Employee Dossier**: Modal and dedicated page views of master records.
-- **CSV Data Export**: 1-click export of workforce directory.
+- [Why Dayflow?](#-why-dayflow)
+- [Feature Modules](#-feature-modules)
+- [Demo Personas](#-demo-personas--quick-switcher)
+- [Tech Stack](#️-architecture--tech-stack)
+- [Getting Started](#-getting-started)
+- [Team](#-team-contributors)
 
-### 2. ⏱️ Real-Time Attendance Tracking
-- **Interactive Check-In / Check-Out Widget**: Real-time timer, work hours counter, shift note logger, and status tracking (*Present, Late, Half Day, Absent*).
-- **Grace Period Engine**: Automatic late calculation for arrivals past 09:15 AM.
-- **Admin Attendance Register**: Daily logs with date selector, department breakdown, attendance rates, and CSV reporting.
-- **Personal History**: 7-day, 30-day, and all-time work hour history with average hours/shift metrics.
+---
 
-### 3. 🏖️ Leave Management & Approval Workflows
-- **Leave Types**: Paid Annual Leave, Sick Leave, Casual Leave, and Unpaid Leave.
-- **Balance & Quota Engine**: Real-time quota calculation (18 Paid, 12 Sick, 8 Casual) with remaining days countdowns.
-- **Employee Application Flow**: Date-range picker, automatic day count computation, and justification inputs.
-- **Admin Review Queue**: Pending leave queue with 1-click Quick Approve/Reject, detailed modal reviews, and supervisor feedback comments.
-- **Instant Alerts**: Notifications dispatched to employees upon status resolution.
+## ✨ Why Dayflow?
 
-### 4. 💳 Compensation & Automated Payroll
-- **Automated Pay Run**: 1-Click monthly payroll engine that calculates base pay, statutory health & insurance deductions, standard income taxes, and net take-home pay.
-- **Payslip Generator & Viewer**: Official, printable/downloadable company payslip statements with itemized earnings and deductions.
-- **Manual Adjustments**: Admin form to edit bonuses, overtime allowances, or tax withholdings.
-- **Employee Pay Archive**: Self-service history of all disbursed payslips with net compensation summaries.
+Most HR tools feel like spreadsheets wearing a UI. Dayflow doesn't.
 
-### 5. 🤖 AI HR Assistant (Powered by Gemini)
-- **Role-Aware Context**: Contextual responses tailored to whether an Administrator or Employee is interacting.
-- **Admin Capabilities**: Query team attendance rates, analyze pending leave backlogs, calculate monthly payroll totals, and draft employee announcements.
-- **Employee Capabilities**: Inquire about remaining leave balances, company holidays, working hours policies, and payslip breakdowns.
-- **Quick Prompts**: Pre-configured action chips for instant HR intelligence.
+It's built as a genuine **role-aware SaaS product** — Admins and Employees see fundamentally different experiences, powered by real-time state, a persistent local database engine (with full PostgreSQL/Supabase support), and an AI assistant that actually understands HR context instead of just answering generic prompts.
+
+> 💡 **What makes it unique:** everything — attendance, leave, payroll, and AI chat — runs on the *same* live data engine, so a leave approval instantly reflects in payroll deductions and the AI assistant's answers, with zero manual syncing.
+
+---
+
+## 🌟 Feature Modules
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 👥 Workforce & Employee Management
+- Searchable master directory, filterable by department & status
+- Table view **and** visual profile card view
+- Full CRUD with auto-generated IDs, avatars & emergency contacts
+- Detailed employee dossier modal & dedicated pages
+- 1-click CSV export
+
+</td>
+<td width="50%" valign="top">
+
+### ⏱️ Real-Time Attendance Tracking
+- Live check-in/check-out widget with running timer
+- Grace-period engine — auto-flags late arrivals past 09:15 AM
+- Admin daily register with department breakdowns
+- Personal 7-day / 30-day / all-time history & averages
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🏖️ Leave Management & Approvals
+- 4 leave types: Paid, Sick, Casual, Unpaid
+- Live quota engine (18 Paid · 12 Sick · 8 Casual)
+- Date-range picker with auto day-count
+- Admin queue with quick approve/reject + comments
+- Instant status-change notifications
+
+</td>
+<td width="50%" valign="top">
+
+### 💳 Compensation & Automated Payroll
+- 1-click monthly pay-run engine
+- Auto-calculates tax, insurance & net take-home
+- Printable/downloadable itemized payslips
+- Manual bonus/overtime/tax adjustments
+- Self-service employee pay archive
+
+</td>
+</tr>
+</table>
+
+### 🤖 AI HR Assistant — *Powered by Gemini*
+
+An AI teammate that knows **who's asking**:
+
+| As an Admin, ask it to... | As an Employee, ask it to... |
+|---|---|
+| 📊 Report team attendance rates | 🌴 Check your remaining leave balance |
+| 📥 Summarize the pending leave backlog | 📅 List upcoming company holidays |
+| 💰 Calculate this month's payroll total | 🕘 Explain working-hour policies |
+| 📝 Draft an employee announcement | 🧾 Break down your latest payslip |
+
+Quick-prompt chips make common questions one tap away.
 
 ---
 
 ## 🔑 Demo Personas & Quick Switcher
 
-Use the **1-Click Persona Switcher** on the Login page to instantly test both user roles:
+Try Dayflow instantly — no signup needed. Use the **1-click Persona Switcher** on the login page to jump between roles.
 
-| Role | Demo Email | Password | Name & Title |
+| Role | Name & Title | Email | Password |
 |---|---|---|---|
-| **Admin / HR Manager** | `admin@dayflow.io` | `admin123` | **Sarah Jenkins**, VP of People Operations |
-| **Employee (Demo 1)** | `alex.morgan@dayflow.io` | `employee123` | **Alex Morgan**, Lead Backend Architect |
-| **Employee (Demo 2)** | `david.kim@dayflow.io` | `employee123` | **David Kim**, Financial Controller |
-| **Employee (Demo 3)** | `elena.rostova@dayflow.io` | `employee123` | **Elena Rostova**, HR Specialist |
+| 🛡️ **Admin** | Sarah Jenkins · VP of People Operations | `admin@dayflow.io` | `admin123` |
+| 👨‍💻 **Employee** | Alex Morgan · Lead Backend Architect | `alex.morgan@dayflow.io` | `employee123` |
+| 📊 **Employee** | David Kim · Financial Controller | `david.kim@dayflow.io` | `employee123` |
+| 🎯 **Employee** | Elena Rostova · HR Specialist | `elena.rostova@dayflow.io` | `employee123` |
 
 ---
 
 ## 🏗️ Architecture & Tech Stack
 
-- **Frontend**: React 19, TypeScript, Vite, React Router (`HashRouter` for preview stability)
-- **Styling**: Tailwind CSS v4, Lucide Icons, Canvas Confetti
-- **State & Contexts**:
-  - `AuthContext`: Role-Based Access Control (`ADMIN` vs `EMPLOYEE`)
-  - `NotificationContext`: Real-time notification stream with unread counters
-  - `ToastContext`: Global animated toast notifications
-- **Data Engine**:
-  - Dual-mode architecture with **PostgreSQL / Supabase integration** (`supabase/schema.sql` and `supabase/seed.sql` provided).
-  - Built-in **Persistent LocalDatabaseEngine** with pre-seeded data for 11 realistic employees, attendance logs, leave records, and payroll runs that persist across browser reloads.
-  - Reviewer Reset tool in **Admin &rarr; Settings** to restore initial seed data at any time.
+```
+Frontend    →  React 19 · TypeScript · Vite · React Router (HashRouter)
+Styling     →  Tailwind CSS v4 · Lucide Icons · Canvas Confetti
+State       →  AuthContext (RBAC) · NotificationContext · ToastContext
+Data Layer  →  PostgreSQL / Supabase  +  Persistent LocalDatabaseEngine
+AI Layer    →  Gemini API — role-aware contextual responses
+```
+
+- **Dual-mode data engine** — plug into real PostgreSQL/Supabase (`supabase/schema.sql`, `supabase/seed.sql`) or run entirely offline on a built-in persistent engine pre-seeded with 11 realistic employees, attendance logs, leave records & payroll runs.
+- **Reviewer Reset** tool under `Admin → Settings` restores the original seed data anytime — perfect for demos.
 
 ---
 
-## 🚀 Running Locally
-
+## 🚀 Getting Started
 
 ```bash
-# Install dependencies
+# 1. Install dependencies
 npm install
 
-# Start development server
+# 2. Start the development server
 npm run dev
 
-# Run production build & verify TypeScript
+# 3. Verify types & build for production
 npm run lint
 npm run build
 ```
-## Team Contributors
 
-- Shashank M — Project Lead
-- Sahana Nagesh Rao — Team Member
-- Satvik S P — Team Member
+---
 
+## 👨‍👩‍👧 Team Contributors
+
+| Name | Role |
+|---|---|
+| **Shashank M** | Project Lead |
+| **Sahana Nagesh Rao** | Team Member |
+| **Satvik S P** | Team Member |
+
+---
+
+<div align="center">
+
+Built with ❤️ for **Odoo Hackathon 2026**
+
+</div>
