@@ -83,8 +83,9 @@ npm run dev
 npm run lint
 npm run build
 ```
-## Team Members
-- Sahana Nagesh Rao
-- Shashank M
-- Satvik S P 
+## Team Contributors
+
+- Shashank M — Project Lead
+- Sahana Nagesh Rao — Team Member
+- Satvik S P — Team Member
 
