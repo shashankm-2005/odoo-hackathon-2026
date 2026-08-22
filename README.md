@@ -84,7 +84,6 @@ npm run lint
 npm run build
 ```
 ## Team Members
-
 - Sahana Nagesh Rao
 - Shashank M
 - Satvik S P
