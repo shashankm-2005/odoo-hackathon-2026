@@ -1,0 +1,6 @@
+{
+  "name": "Dayflow HRMS",
+  "description": "Dayflow - Every workday, perfectly aligned. Enterprise Human Resource Management System featuring Employee Management, Attendance Check-in/out, Leave Approval Workflows, Payroll, and AI HR Analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
