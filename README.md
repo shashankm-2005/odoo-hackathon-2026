@@ -86,5 +86,5 @@ npm run build
 ## Team Members
 - Sahana Nagesh Rao
 - Shashank M
-- Satvik S P
+- Satvik S P 
 
