@@ -70,11 +70,7 @@ Use the **1-Click Persona Switcher** on the Login page to instantly test both us
 ---
 
 ## 🚀 Running Locally
-## Team Members
 
-- Shashank M
-- Satvik S P
-- Sahana Nagesh Rao
 
 ```bash
 # Install dependencies
@@ -87,3 +83,8 @@ npm run dev
 npm run lint
 npm run build
 ```
+## Team Members
+
+- Shashank M
+- Satvik S P
+- Sahana Nagesh Rao
